@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Index Page</title>
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+  <link rel="stylesheet" href="https://ybsuen.github.io/Full-Day-Workshop/styles/style.css">
+  <script src="https://ybsuen.github.io/Full-Day-Workshop/scripts/myscript.js"></script>
+</head>
+<body>
+
+<!-- Site navigation menu -->
+<ul class="navbar">
+  <li><a href="index.html">Home page</a>
+  <li><a href="musings.html">Musings</a>
+  <li><a href="town.html">My town</a>
+  <li><a href="links.html">Links</a>
+</ul>
+
+<!-- Main content -->
+<h1>Index Page</h1>
+
+<p id="welcome">Welcome to my index page!
+  <h1>Index Page</h1>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p id="welcome" class="card-text">Welcome to my index page!</p>
+    </div>
+  </div>
+  <div class="well"></div>
+<p id="demo">It lacks images, but at least it has style.
+And it has links, even if they don't go
+anywhere&hellip;
+
+<p>There should be more here, but I don't know
+what yet.
+
+<!-- Sign and date the page, it's only polite! -->
+ <form>
+  <div class="form-group">
+    <label for="text">Enter X:</label>
+    <input type="text" class="form-control" id="x_value" placeholder="Enter x value" name="x_value">
+  </div>
+  <div class="form-group">
+    <label for="text">Enter Y:</label>
+    <input type="text" class="form-control" id="y_value" placeholder="Enter y value" name="y_value">
+  </div>
+</form>
+<button onclick="ask_xy();">Enter X plus Y</button><br>
+<button onclick="show_topic();">Change Text Color of Welcome Message</button>
+</body>
+</html>
