@@ -8,27 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src='scriptlib.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-  <script>
-
-  function getData() {
-// GET the data
-  items = [];
-  var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Design%20Projects?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
-
-  axios.get(airtable_read_endpoint)
-  .then(function (response) {
-    items = response.data.records;
-    for (i=1; i< 10 ;i++) { 
-
- }
-    // console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-  }
-  </script>
+  <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script-->
 </head>
 
 <body>
