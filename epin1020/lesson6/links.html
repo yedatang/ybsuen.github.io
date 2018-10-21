@@ -3,8 +3,12 @@
 <head>
   <title>Link Page</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--link rel="stylesheet" href="https://ybsuen.github.io/Full-Day-Workshop/styles/style.css"-->
+  <script src="https://ybsuen.github.io/epin1020/lesson6/scripts/myscript.js"></script>
+
   <link rel="stylesheet" href="style.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
   <script>
   function compute_x_plus_y(x,y) { 
     var z = 0;
@@ -39,63 +43,67 @@
     x.style.fontSize = "25px"; 
     x.style.color = "red"; 
   } 
+  </script>
 
-  </script> 
 </head>
 
 <body>
 <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home page</a>
-          <li><a href="musings.html">Musings</a>
-          <li><a href="town.html">My town</a>
-          <li class="active"><a href="links.html">Links</a>
-        </ul>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
       </div>
-    </nav>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home page</a>
+        <li><a href="musings.html">Musings</a>
+        <li><a href="town.html">My town</a>
+        <li  class="active"><a href="links.html">Links</a>
+      </ul>
+    </div>
+  </nav>
 <div class="container">
+
   <div class="row">
     <div class="col-sm-2">
 
-   </div>
-   <div class="col-sm-6">
-     <h1>Link Page</h1>
+    </div>
+    <div class="col-sm-6">
+      <h1>Link Page</h1>
 
-     <div class="card" style="width: 18rem;">
-       <div class="card-body">
-         <h5 class="card-title">Card title</h5>
-         <p id="welcome" class="card-text">Welcome to my link page!</p>
-       </div>
-     </div>
-     <div class="well"><p id="demo">It lacks images, but at least it has style.
-     And it has links, even if they don't go
-     anywhere&hellip;</div>
+      <p>Welcome to my link page!</p>
 
-     <!-- Sign and date the page, it's only polite! -->
-     <br>
-     <button type="button" class="btn btn-primary" onclick="ask_for_x_n_y();">X + Y = ?</button>
-     <button type="button" class="btn btn-primary" onclick="ask_xy();">Another X + Y = ?</button>
-     <button type="button" class="btn btn-success" onclick="show_topic();">Change Text Color of Welcome Message</button>
-     <form id="myForm">
-         <div class="form-group">
-           <label for="1st">Enter first number:</label>
-           <input type="text" class="form-control">
-         </div>
-         <div class="form-group">
-           <label for="2nd">Enter second number:</label>
-           <input type="text" class="form-control">
-         </div>
-       </form>
-     <address>Made 5 April 2004<br>
-       by myself.</address>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p id="welcome" class="card-text">Welcome to my link page!</p>
+          </div>
+        </div>
+        <div class="well"><p id="demo">It lacks images, but at least it has style.
+        And it has links, even if they don't go
+        anywhere&hellip;</div>
+
+
+        <!-- Sign and date the page, it's only polite! -->
+        <br>
+        <button type="button" class="btn btn-primary" onclick="ask_for_x_n_y();">X + Y = ?</button>
+        <button type="button" class="btn btn-primary" onclick="ask_xy();">Another X + Y = ?</button>
+        <button type="button" class="btn btn-success" onclick="show_topic();">Change Text Color of Welcome Message</button>
+        <form id="myForm">
+            <div class="form-group">
+              <label for="1st">Enter first number:</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="2nd">Enter second number:</label>
+              <input type="text" class="form-control">
+            </div>
+          </form>
+    </div>
+    <div class="col-sm-4">
+
+
+    </div>
   </div>
-  <div class="col-sm-4">
-
- </div>
 </div>
-</body>
-</html>
+  </body>
+  </html>
