@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Musings Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+  <script src='scriptlib.js'></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+  <script>
+  function show_topic() { 
+    var x = document.getElementById("welcome"); 
+    x.style.fontSize = "25px"; 
+    x.style.color = "red"; 
+  } 
+
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home page</a>
+          <li class="active"><a href="musings.html">Musings</a>
+          <li><a href="town.html">My town</a>
+          <li><a href="links.html">Links</a>
+        </ul>
+      </div>
+    </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Musing Page</h1>
+
+        <p>Welcome to my musing page!
+
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p id="welcome" class="card-text">Welcome to my musing page!</p>
+            </div>
+          </div>
+          <div class="well"><p id="demo">It lacks images, but at least it has style.
+          And it has links, even if they don't go
+          anywhere&hellip;</div>
+
+
+          <p>There should be more here, but I don't know
+          what yet.</p>
+
+          <!-- Sign and date the page, it's only polite! -->
+
+          <button type="button" class="btn btn-success" onclick="show_topic();">Change Text Color of Welcome Message</button>
+          <button type="button" class="btn btn-warning" id='get_data'>Get Data</button><br>
+          <div class="table-responsive">
+          <table id="example" width="100%" class="table table-bordered">
+          </table>
+        </div>
+      </div>
+  </div>
+  <script src='scriptlib2.js'></script>
+</body>
+</html>
+</html>
