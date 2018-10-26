@@ -27,8 +27,8 @@
   }
 
   function ask_xy() { 
-    var x = document.getElementById("myForm").elements[0].value;
-    var y = document.getElementById("myForm").elements[1].value;
+    var x = document.getElementById("1st_num").value;
+    var y = document.getElementById("2nd_num").value;
     var z = compute_x_plus_y(x,y);
     var x = document.getElementById("demo"); 
     x.style.fontSize = "25px"; 
@@ -88,11 +88,11 @@
         <form id="myForm">
             <div class="form-group">
               <label for="1st">Enter first number:</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id='1st_num'>
             </div>
             <div class="form-group">
               <label for="2nd">Enter second number:</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" id='2nd_num'>
             </div>
           </form>
     </div>
