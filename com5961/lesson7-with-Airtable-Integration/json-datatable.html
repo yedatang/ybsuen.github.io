@@ -7,6 +7,9 @@
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css"/>
            <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+           <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+           <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+           <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
       </head>
       <body>
            <br /><br />
@@ -22,6 +25,7 @@
                           </tr>
                      </thead>
                 </table>
+                <div id="chart"></div>
            </div>
       </body>
  </html>
@@ -35,5 +39,17 @@
                 {     "data"     :     "designation"}
            ]
       });
+      var chart = c3.generate({
+          data: {
+              columns: [
+                  ['Lulu', 50],
+                  ['Olaf', 50],
+              ],
+              type : 'donut'
+          },
+          donut: {
+              title: "Dogs love:",
+          }
+       });
  });
- </script> 
+ </script>
