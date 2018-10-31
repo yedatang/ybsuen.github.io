@@ -88,16 +88,20 @@ $(document).ready(function(){
                 }); // end c3.generate
                 */
                 var chart = c3.generate({
-                     data: {
-                         columns: [
-                            dataSet,
-                         ],
-                         type : 'bar'
-                     },
-                     bar: {
-                         title: "Dogs love:",
-                     }
-                  });
+                  data: {
+                            json: dataSet,
+                            type: 'bar',
+                            keys: {
+                                x: 'Name', // it's possible to specify 'x' when category axis
+                                value: ['Total_Entries'],
+                            }
+                        },
+                        axis: {
+                            x: {
+                                type: 'category'
+                            }
+                        } // data
+                  }); // c3.generate
          }); // end .getJSON
       }); // end button
 
