@@ -73,13 +73,14 @@ $(document).ready(function(){
          }); // end .getJSON
       }); // end button
 
+        var modData = [];
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
         $.getJSON('https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8', function(result) {
                  $.each(result.records, function(key,value) {
-                     modData = [];
+                     items = [];
                          items.push(value.fields.Name);
                          items.push(value.fields.Total_Entries);
-                         dataSet.push(modData);
+                         modData.push(modData);
                   }); // end .each
 
                   var  chart = c3.generate({
