@@ -68,37 +68,27 @@ $(document).ready(function(){
                         defaultContent:""},
                       { title: "Total Entries",
                         defaultContent:""},
-                  ]
-              } );
+                  ] // rmf columns
+              } ); // end dataTable
+              chart = c3.generate({
+                          data: {
+                              json: dataSet,
+                              type: 'bar',
+                              keys: {
+                                x: 'Name',
+                                value: ['Total_Entries'],
+                              }
+                          }, // end data
+                          axis: {
+                              x: {
+                                   type: 'category'
+                              }
+                          } // end axis
+                }); /* end c3.generate */
+
          }); // end .getJSON
       }); // end button
 
-        var modData = [];
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
-        $.getJSON('https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8', function(result) {
-                 $.each(result.records, function(key,value) {
-                     items = [];
-                         items.push(value.fields.Name);
-                         items.push(value.fields.Total_Entries);
-                         modData.push(items);
-                  }); // end .each
-
-
-                  chart = c3.generate({
-                       data: {
-                           json: modData,
-                           type: 'bar',
-                           keys: {
-                             x: 'Name',
-                             value: ['Total_Entries'],
-                           }
-                       }, // end data
-                       axis: {
-                           x: {
-                                type: 'category'
-                           }
-                       } // end axis
-                     }); /* end c3.generate */
-        }); /* end $.getJSON */
 
 }); // document ready
