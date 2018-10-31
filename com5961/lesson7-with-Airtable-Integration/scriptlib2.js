@@ -73,31 +73,32 @@ $(document).ready(function(){
          }); // end .getJSON
       }); // end button
 
-      var modData = [];
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
         $.getJSON('https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8', function(result) {
-               $.each(result.records, function(key,value) {
-                  modData.push(value);
-                  console.log(value);
-                }); /* end .each */
+                 $.each(result.records, function(key,value) {
+                     modData = [];
+                         items.push(value.fields.Name);
+                         items.push(value.fields.Total_Entries);
+                         dataSet.push(modData);
+                  }); // end .each
 
-          var  chart = c3.generate({
+                  var  chart = c3.generate({
 
-            data: {
-                json: modData,
-                type: 'bar',
-                keys: {
-                    x: 'Name',
-                    value: ['Total_Entries'],
+                    data: {
+                        json: modData,
+                        type: 'bar',
+                        keys: {
+                            x: 'Name',
+                            value: ['Total_Entries'],
+                            }
+                    },
+
+                    axis: {
+                        x: {
+                           type: 'category'
+                        }
                     }
-            },
-
-            axis: {
-                x: {
-                   type: 'category'
-                }
-            }
-          }); /* end c3.generate */
+                  }); /* end c3.generate */
         }); /* end $.getJSON */
 
 }); // document ready
