@@ -70,6 +70,7 @@ $(document).ready(function(){
                         defaultContent:""},
                   ] // rmf columns
               } ); // end dataTable
+              /*
               chart = c3.generate({
                           data: {
                               json: dataSet,
@@ -85,7 +86,7 @@ $(document).ready(function(){
                               }
                           } // end axis
                 }); /* end c3.generate */
-
+                */
          }); // end .getJSON
       }); // end button
 
