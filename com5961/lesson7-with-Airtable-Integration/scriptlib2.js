@@ -83,23 +83,22 @@ $(document).ready(function(){
                          modData.push(items);
                   }); // end .each
 
-                  var  chart = c3.generate({
 
-                    data: {
-                        json: modData,
-                        type: 'bar',
-                        keys: {
-                            x: 'Name',
-                            value: ['Total_Entries'],
-                            }
-                    },
-
-                    axis: {
-                        x: {
-                           type: 'category'
-                        }
-                    }
-                  }); /* end c3.generate */
+                  chart = c3.generate({
+                       data: {
+                           json: modData,
+                           type: 'bar',
+                           keys: {
+                             x: 'Name',
+                             value: ['Total_Entries'],
+                           }
+                       }, // end data
+                       axis: {
+                           x: {
+                                type: 'category'
+                           }
+                       } // end axis
+                     }); /* end c3.generate */
         }); /* end $.getJSON */
 
 }); // document ready
