@@ -80,7 +80,7 @@ $(document).ready(function(){
                      items = [];
                          items.push(value.fields.Name);
                          items.push(value.fields.Total_Entries);
-                         modData.push(modData);
+                         modData.push(items);
                   }); // end .each
 
                   var  chart = c3.generate({
