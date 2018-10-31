@@ -19,7 +19,7 @@ $(document).ready(function(){
                $.each(result.records, function(key,value) {
                    items = [];
                        items.push(value.fields.Name);
-                       items.push(value.fields.Stage);
+                       items.push(value.fields.Stage_Desc);
                        items.push(value.fields.Completed);
                        items.push(value.fields.Time_Estimate);
                        items.push(value.fields.Weight_Factor);
