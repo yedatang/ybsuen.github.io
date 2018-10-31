@@ -25,7 +25,9 @@ $(document).ready(function(){
                        items.push(value.fields.Weight_Factor);
                        items.push(value.fields.converted);
                        dataSet.push(items);
+                       console.log(items);
                 }); // end .each
+                console.log(dataSet);
              $('#example').DataTable( {
                  data: dataSet,
                  retrieve: true,
