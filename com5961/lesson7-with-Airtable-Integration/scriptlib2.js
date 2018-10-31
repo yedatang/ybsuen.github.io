@@ -20,6 +20,7 @@ $(document).ready(function(){
                        items.push(value.fields.Name);
                        items.push(value.fields.Completed);
                        items.push(value.fields.Time_Estimate);
+                       items.push(value.fields.Weight_Factor);
                        items.push(value.fields.converted);
                        dataSet.push(items);
                 }); // end .each
@@ -33,6 +34,8 @@ $(document).ready(function(){
                        defaultContent:"" },
                      { title: "Time Estimated",
                        defaultContent:""},
+                     { title: "Weight Factor",
+                         defaultContent:""},
                      { title: "Converted",
                        defaultContent:""},
                  ]
