@@ -59,49 +59,28 @@ $(document).ready(function(){
                         items.push(value.fields.Name);
                         items.push(value.fields.Total_Entries);
                         dataSet.push(items);
+                        console.log(items);
+                        console.log(dataSet);
                  }); // end .each
-              $('#example').DataTable( {
-                  data: dataSet,
-                  retrieve: true,
-                  columns: [
-                      { title: "Name",
-                        defaultContent:""},
-                      { title: "Total Entries",
-                        defaultContent:""},
-                  ] // rmf columns
-              } ); // end dataTable
-              /*
-              chart = c3.generate({
-                          data: {
-                              json: dataSet,
-                              type: 'bar',
-                              keys: {
-                                x: 'Name',
-                                value: ['Total_Entries'],
-                              }
-                          }, // end data
-                          axis: {
-                              x: {
-                                   type: 'category'
-                              }
-                          } // end axis
-                }); // end c3.generate
-                */
-                var chart = c3.generate({
-                  data: {
-                            json: dataSet,
-                            type: 'bar',
-                            keys: {
-                                x: 'Name', // it's possible to specify 'x' when category axis
-                                value: ['Total_Entries'],
-                            }
-                        },
-                        axis: {
-                            x: {
-                                type: 'category'
-                            }
-                        } // data
-                  }); // c3.generate
+
+                 data: {
+                   json: [
+               {name: 'www.site1.com', upload: 200, download: 200, total: 400},
+               {name: 'www.site2.com', upload: 100, download: 300, total: 400},
+               {name: 'www.site3.com', upload: 300, download: 200, total: 500},
+               {name: 'www.site4.com', upload: 400, download: 100, total: 500},
+               ],
+               keys: {
+    //                x: 'name', // it's possible to specify 'x' when category axis
+                   value: ['upload', 'download'],
+               }
+                   },
+                   axis: {
+                       x: {
+            //                type: 'category'
+                       }
+                   }
+
          }); // end .getJSON
       }); // end button
 
