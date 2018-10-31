@@ -60,35 +60,18 @@ $(document).ready(function(){
                         items.push(value.fields.Total_Entries);
                         dataSet.push(items);
                  }); // end .each
-              $('#example').DataTable( {
-                  data: dataSet,
-                  retrieve: true,
-                  columns: [
-                      { title: "Name",
-                        defaultContent:""},
-                      { title: "Total Entries",
-                        defaultContent:""},
-                  ] // rmf columns
-              } ); // end dataTable
-              /*
-              chart = c3.generate({
-                          data: {
-                              json: dataSet,
-                              type: 'bar',
-                              keys: {
-                                x: 'Name',
-                                value: ['Total_Entries'],
-                              }
-                          }, // end data
-                          axis: {
-                              x: {
-                                   type: 'category'
-                              }
-                          } // end axis
-                }); // end c3.generate
-                */
-         }); // end .getJSON
-      }); // end button
+                $('#example').DataTable( {
+                    data: dataSet,
+                    retrieve: true,
+                    columns: [
+                        { title: "Name",
+                          defaultContent:""},
+                        { title: "Total Entries",
+                          defaultContent:""},
+                    ] // rmf columns
+                } ); // end dataTable
+          }); // end .getJSON
+       }); // end button
 
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
 
