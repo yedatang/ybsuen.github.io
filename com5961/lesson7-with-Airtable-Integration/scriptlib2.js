@@ -59,27 +59,24 @@ $(document).ready(function(){
                         items.push(value.fields.Name);
                         items.push(value.fields.Total_Entries);
                         dataSet.push(items);
-                        console.log(items);
-                        console.log(dataSet);
                  }); // end .each
 
-                 data: {
+              data: {
                    json: [
                {name: 'www.site1.com', upload: 200, download: 200, total: 400},
                {name: 'www.site2.com', upload: 100, download: 300, total: 400},
                {name: 'www.site3.com', upload: 300, download: 200, total: 500},
                {name: 'www.site4.com', upload: 400, download: 100, total: 500},
                ],
-               keys: {
-    //                x: 'name', // it's possible to specify 'x' when category axis
-                   value: ['upload', 'download'],
-               }
-                   },
+                   keys: {
+        //                x: 'name', // it's possible to specify 'x' when category axis
+                       value: ['upload', 'download'],
+                        },
                    axis: {
                        x: {
             //                type: 'category'
-                       }
-                   }
+                          } // end axis
+                   } // end axiis
 
          }); // end .getJSON
       }); // end button
