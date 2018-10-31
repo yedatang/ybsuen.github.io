@@ -54,7 +54,6 @@ $(document).ready(function(){
                 $.each(result.records, function(key,value) {
                     items = [];
                         items.push(value.fields.Name);
-                        items.push(value.fields.Task);
                         items.push(value.fields.Total_Entries);
                         dataSet.push(items);
                  }); // end .each
@@ -64,8 +63,6 @@ $(document).ready(function(){
                   columns: [
                       { title: "Name",
                         defaultContent:""},
-                      { title: "Tasks",
-                        defaultContent:"" },
                       { title: "Total Entries",
                         defaultContent:""},
                   ]
