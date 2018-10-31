@@ -77,8 +77,8 @@ $(document).ready(function(){
         // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
         $.getJSON('https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8', function(result) {
                $.each(result.records, function(key,value) {
-                  modData.push(value.fields.Name);
-                  console.log(value.fields.Total_Entries);
+                  modData.push(value);
+                  console.log(value);
                 }); /* end .each */
 
           var  chart = c3.generate({
