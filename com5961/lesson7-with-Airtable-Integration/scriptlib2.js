@@ -19,7 +19,7 @@ $(document).ready(function(){
                $.each(result.records, function(key,value) {
                    items = [];
                        items.push(value.fields.Name);
-                       items.push(value.fields.Category);
+                       items.push(value.fields.Stage);
                        items.push(value.fields.Completed);
                        items.push(value.fields.Time_Estimate);
                        items.push(value.fields.Weight_Factor);
@@ -32,7 +32,7 @@ $(document).ready(function(){
                  columns: [
                      { title: "Name",
                        defaultContent:""},
-                     { title: "Category",
+                     { title: "Stage",
                          defaultContent:"" },
                      { title: "Completed",
                        defaultContent:"" },
@@ -51,7 +51,7 @@ $(document).ready(function(){
          var items = [];
          var i = 0;
          var airtable_read_endpoint =
-         "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Category?api_key=keyTcsTzckqyBTlk8";
+         "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8";
          var dataSet = [];
          $.getJSON(airtable_read_endpoint, function(result) {
                 $.each(result.records, function(key,value) {
