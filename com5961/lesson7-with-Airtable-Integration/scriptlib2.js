@@ -86,7 +86,7 @@ $(document).ready(function(){
                               }
                           } // end axis
                 }); /* end c3.generate */
-                */
+              
          }); // end .getJSON
       }); // end button
 
