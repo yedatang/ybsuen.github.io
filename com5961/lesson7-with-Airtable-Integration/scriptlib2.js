@@ -19,6 +19,7 @@ $(document).ready(function(){
                $.each(result.records, function(key,value) {
                    items = [];
                        items.push(value.fields.Name);
+                       items.push(value.fields.Category);
                        items.push(value.fields.Completed);
                        items.push(value.fields.Time_Estimate);
                        items.push(value.fields.Weight_Factor);
@@ -31,6 +32,8 @@ $(document).ready(function(){
                  columns: [
                      { title: "Name",
                        defaultContent:""},
+                     { title: "Category",
+                         defaultContent:"" },
                      { title: "Completed",
                        defaultContent:"" },
                      { title: "Time Estimated",
