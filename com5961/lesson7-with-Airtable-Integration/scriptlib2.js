@@ -90,8 +90,7 @@ $(document).ready(function(){
                 var chart = c3.generate({
                      data: {
                          columns: [
-                           ['Lulu', 50,4,3,2],
-                           ['Olaf', 50,6,8,1]
+                            dataSet,
                          ],
                          type : 'bar'
                      },
