@@ -85,8 +85,8 @@ $(document).ready(function(){
                                    type: 'category'
                               }
                           } // end axis
-                }); /* end c3.generate */
-              
+                }); // end c3.generate
+                */
          }); // end .getJSON
       }); // end button
 
