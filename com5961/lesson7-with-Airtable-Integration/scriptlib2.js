@@ -78,17 +78,11 @@ $(document).ready(function(){
 
                 var chart = c3.generate({
                      data: {
-                         columns: [
-                             ['Lulu', 50],
-                             ['Olaf', 30],
-                             ['Adaf', 20],
-                             ['Blao', 55],
-                             ['Clod', 60]
-                         ],
+                         columns: dataSet,
                          type : 'bar'
                      },
                      donut: {
-                         title: "Dogs love:",
+                         title: "Tasks for Each Stage:",
                      }
                  });
 
