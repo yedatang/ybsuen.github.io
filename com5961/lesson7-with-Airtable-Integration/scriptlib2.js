@@ -80,9 +80,12 @@ $(document).ready(function(){
                      data: {
                          columns: [
                              ['Lulu', 50],
-                             ['Olaf', 50],
+                             ['Olaf', 30],
+                             ['Adaf', 20],
+                             ['Blao', 55],
+                             ['Clod', 60]
                          ],
-                         type : 'donut'
+                         type : 'bar'
                      },
                      donut: {
                          title: "Dogs love:",
