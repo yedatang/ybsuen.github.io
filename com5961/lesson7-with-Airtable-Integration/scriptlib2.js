@@ -73,6 +73,7 @@ $(document).ready(function(){
                 $('#example').DataTable( {
                     data: dataSet,
                     retrieve: true,
+                    ordering: false,
                     columns: [
                         { title: "Name",
                           defaultContent:""},
