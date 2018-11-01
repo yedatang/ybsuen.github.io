@@ -62,7 +62,9 @@ $(document).ready(function(){
                         items.push(value.fields.Name);
                         items.push(value.fields.Total_Entries);
                         dataSet.push(items);
+                        console.log(items);
                  }); // end .each
+                 console.log(dataSet);
                 $('#example').DataTable( {
                     data: dataSet,
                     retrieve: true,
