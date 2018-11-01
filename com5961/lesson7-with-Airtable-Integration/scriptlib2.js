@@ -125,7 +125,7 @@ $(document).ready(function(){
                          columns: table2_dataSet,
                          type : 'bar'
                      },
-                     donut: {
+                     bar: {
                          title: "Tasks for Each Stage:",
                      }
                  });
