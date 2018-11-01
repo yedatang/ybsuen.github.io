@@ -13,17 +13,13 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
   <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
   <script>
+
   function show_topic() { 
     var x = document.getElementById("welcome"); 
     x.style.fontSize = "25px"; 
     x.style.color = "red"; 
-  } 
-
-  function clear_screen(sltr){
-    var container = document.getElementById(sltr);
-    container.innerHTML= " ";
   }
-
+ 
   </script>
 </head>
 
@@ -65,7 +61,7 @@
           <!-- Sign and date the page, it's only polite! -->
 
           <button type="button" class="btn btn-success" onclick="show_topic("container");">Change Text Color of Welcome Message</button>
-          <button type="button" class="btn btn-success" onclick="clear_screen();">Clear Screen</button>
+          <button type="button" class="btn btn-success" id='clear_screen'>Clear Screen</button>
           <button type="button" class="btn btn-warning" id='get_data'>Get Data</button>
           <button type="button" class="btn btn-warning" id='roll_up'>Roll Up</button><br>
           <div class="table-responsive">

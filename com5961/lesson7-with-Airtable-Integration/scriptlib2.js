@@ -10,8 +10,12 @@ $(document).ready(function(){
         $("h2").html("You clicked me hard.");
     });
 
+    $("button#clear_screen").click(function() {
+        var $x = $("container");
+        $x.empty();
+    });
+
     $("button#get_data").click(function() {
-        clear_screen("table");
         var items = [];
         var i = 0;
         var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Tasks?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
@@ -52,8 +56,6 @@ $(document).ready(function(){
      }); // end button
 
      $("button#roll_up").click(function() {
-         clear_screen("table");
-         clear_screen("chart");
          var items = [];
          var i = 0;
          var airtable_read_endpoint =
