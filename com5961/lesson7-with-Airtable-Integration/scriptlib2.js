@@ -83,13 +83,13 @@ $(document).ready(function(){
                           {name: 'www.site4.com', upload: 400, download: 100, total: 500}
                         ],
                         keys: {
-                          // x: 'name', // it's possible to specify 'x' when category axis
+                          x: 'name', // it's possible to specify 'x' when category axis
                           value: ['upload', 'download']
                         }
                       },
                       axis: {
                         x: {
-                          // type: 'category'
+                          type: 'category'
                         }
                       }
                  }); // c3.generate
