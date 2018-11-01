@@ -78,7 +78,7 @@ $(document).ready(function(){
 
                   data: {
                       json: dataSet,
-                      type: ctype,
+                      type: 'bar',
                       keys: {
                           x: 'Name',
                           value: ['Total_Entries'],
