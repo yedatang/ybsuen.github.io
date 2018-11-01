@@ -19,8 +19,8 @@
     x.style.color = "red"; 
   } 
 
-  function reload(){
-    var container = document.getElementById("example");
+  function clear_screen(sltr){
+    var container = document.getElementById(sltr);
     container.innerHTML= "";
   }
 
@@ -64,8 +64,8 @@
 
           <!-- Sign and date the page, it's only polite! -->
 
-          <button type="button" class="btn btn-success" onclick="show_topic();">Change Text Color of Welcome Message</button>
-          <button type="button" class="btn btn-success" onclick="reload();">Reload</button>
+          <button type="button" class="btn btn-success" onclick="show_topic("container");">Change Text Color of Welcome Message</button>
+          <button type="button" class="btn btn-success" onclick="clear_screen();">Clear Screen</button>
           <button type="button" class="btn btn-warning" id='get_data'>Get Data</button>
           <button type="button" class="btn btn-warning" id='roll_up'>Roll Up</button><br>
           <div class="table-responsive">
