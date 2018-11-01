@@ -11,6 +11,7 @@ $(document).ready(function(){
     });
 
     $("button#get_data").click(function() {
+        document.querySelector("body").innerHTML = "";
         var items = [];
         var i = 0;
         var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Tasks?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
@@ -51,6 +52,7 @@ $(document).ready(function(){
      }); // end button
 
      $("button#roll_up").click(function() {
+         document.querySelector("body").innerHTML = "";
          var items = [];
          var i = 0;
          var airtable_read_endpoint =
