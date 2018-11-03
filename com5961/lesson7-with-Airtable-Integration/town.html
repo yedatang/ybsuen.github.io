@@ -4,21 +4,8 @@
   <title>Town Page</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!--link rel="stylesheet" href="https://ybsuen.github.io/Full-Day-Workshop/styles/style.css"-->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
   <script src="https://ybsuen.github.io/epin1020/lesson6/scripts/myscript.js"></script>
-
-  <script>
-  function ask_for_x_n_y() {
-     var x = document.getElementById("myForm").elements[0].value;
-     var y = document.getElementById("myForm").elements[1].value;
-     var z = compute_x_plus_y(x,y);
-     var x = document.getElementById("demo");
-     x.style.fontSize = "25px";
-     x.style.color = "red";
-     document.getElementById("demo").innerHTML = "The answer is " + z;
-  }
-
-  </script>
-
 </head>
 
 <body>
@@ -36,33 +23,24 @@
     </div>
   </nav>
 <div class="container">
-
   <div class="row">
     <div class="col-sm-12">
       <h1>Town Page</h1>
-
       <p>Welcome to my town page!</p>
-
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p id="welcome" class="card-text">Welcome to my town page!</p>
-          </div>
-        </div>
-        <div class="well"><p id="demo">It lacks images, but at least it has style.
-        And it has links, even if they don't go
-        anywhere&hellip;</div>
-
-
-        <p>There should be more here, but I don't know
-        what yet.</p>
-
-        <!-- Sign and date the page, it's only polite! -->
-
-        <button type="button" type="button" class="btn btn-info" onclick="ask_xy();">Enter X plus Y</button>
-        <button type="button" class="btn btn-warning" onclick="show_topic();">Change Text Color of Welcome Message</button>
+      <div id="map" style="width: 600px; height: 400px"></div>
     </div>
   </div>
 </div>
-  </body>
-  </html>
+<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+<script>
+  var map = L.map('map').setView([-41.2858, 174.78682], 14);
+  mapLink =
+      '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+  L.tileLayer(
+      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; ' + mapLink,
+      maxZoom: 18,
+      }).addTo(map);
+</script>
+</body>
+</html>

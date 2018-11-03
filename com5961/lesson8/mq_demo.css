@@ -2,9 +2,20 @@ body {
 	background-color: grey;
 }
 
+.responsive {
+	height: auto;
+  	width: 100%;
+}
+
 @media screen and (max-width: 960px) {
 	body {
 		background-color: red;
+	}
+
+	.responsive {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
 	}
 }
 
@@ -12,17 +23,35 @@ body {
 	body {
 		background-color: orange;
 	}
+
+	.responsive {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+	}
 }
 
 @media screen and (max-width: 550px) {
 	body {
 		background-color: yellow;
 	}
+
+	.responsive {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+	}
 }
 
 @media screen and (max-width: 320px) {
 	body {
 		background-color: green;
+	}
+
+	.responsive {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
 	}
 }
 
