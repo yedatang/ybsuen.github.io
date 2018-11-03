@@ -28,10 +28,26 @@
     <div class="col-sm-12">
       <h1>Town Page</h1>
       <p>Welcome to my town page!</p>
-      <div id="map" style="width: 600px; height: 400px"></div>
+      <!--div id="map" style="width: 600px; height: 400px"></div-->
     </div>
   </div>
 </div>
+<div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+
+<div>
+  <p>An example of how to use <a href="http://leafletjs.com/" target="_blank">Leaflet</a>.
+  <p>From the article <a href="https://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap" target="_blank">Creating An Interactive Map With Leaflet and OpenStreetMap</a>
+  <p>Andy Maloney // <a href="https://asmaloney.com" target="_blank">asmaloney.com</a>
+  <br/>23 Jan 2014
+
+  <p><b>[19 Apr 2014]</b> Added <i>http:</i> to the scheme-less ajax.googleapis.com URI so double-clicking this file to open in the browser works.
+  <p><b>[12 Jul 2016]</b> MapQuest discontinued the tile set I was using, so I switched to OpenStreetMap’s tiles. Note that these are useful only for testing. They say on their site:
+    <blockquote>"Apart from very limited testing purposes, you should not use the tiles supplied by OpenStreetMap.org itself."</blockquote>
+  <p><b>[16 Jul 2016]</b> Switched to Leaflet 0.7.7.
+</div>
+<!--script type='text/javascript' src='maps/markers.json'></script-->
+<!--script type='text/javascript' src='maps/leaf-demo.js'></script-->
+<script type='text/javascript' src='maps/leaflet-demo.js'></script>
 <script>
   var map = L.map('map').setView([22.29716, 114.17419],13);
   mapLink ='<a href="http://openstreetmap.org">OpenStreetMap</a>';
@@ -41,5 +57,7 @@
       maxZoom: 18,
       }).addTo(map);
 </script>
+<script type='text/javascript' src='maps/markers.json'></script>
+<script type='text/javascript' src='maps/leaf-demo.js'></script>
 </body>
 </html>
