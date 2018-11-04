@@ -1,4 +1,17 @@
 // See post: http://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap/
+var map2 = L.map('map2').setView([22.287111, 114.191667], 14);
+
+mapLink =
+    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+L.tileLayer(
+    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; ' + mapLink,
+    maxZoom: 18,
+  }).addTo(map2);
+
+var marker = L.marker([22.287111, 114.191667])
+    .bindPopup( '<a href="https://en.wikipedia.org/wiki/North_Point" target="_blank">North Point</a>')
+    .addTo(map2);
 
 var map1 = L.map( 'map1', {
   center: [20.0, 5.0],
@@ -27,17 +40,3 @@ for ( var i=0; i < markers.length; ++i )
   .bindPopup( '<a href="' + markers[i].url + '" target="_blank">' + markers[i].name + '</a>' )
   .addTo( map1 );
 }
-
-var map2 = L.map('map2').setView([22.287111, 114.191667], 14);
-
-mapLink =
-    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-L.tileLayer(
-    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; ' + mapLink,
-    maxZoom: 18,
-  }).addTo(map2);
-
-var marker = L.marker([22.287111, 114.191667])
-    .bindPopup( '<a href="https://en.wikipedia.org/wiki/North_Point" target="_blank">North Point</a>')
-    .addTo(map2);
