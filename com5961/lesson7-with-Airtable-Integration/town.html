@@ -47,6 +47,7 @@
            $.each(result.records, function(key,value) {
                items = {};
                    items["name"] = value.fields.Name;
+                   items["url"] = value.fields.url;
                    items["latitud"] = value.fields.Lat;
                    items["longitud"] = value.fields.Lng;
                    data.push(items);
