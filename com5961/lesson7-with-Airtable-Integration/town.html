@@ -60,7 +60,8 @@ function show_districts(){
   for (var i in data) {
       var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng )
-          .bindPopup(data[i].name)
+          // .bindPopup(data[i].name)
+          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + data[i].name + '</a>' )
           .addTo(map);
   }
 }
