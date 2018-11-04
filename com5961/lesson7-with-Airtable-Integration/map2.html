@@ -26,6 +26,8 @@
         var promise = $.getJSON("businesses.json");
               promise.then(function(data) {
               //do a bunch of stuff here
+              var allbusinesses = L.geoJson(data);
+              allbusinesses.addTo(map);
               console.log(data) // take a look at the data in the console
           });
 
