@@ -28,14 +28,13 @@
               //do a bunch of stuff here
               var allbusinesses = L.geoJson(data);
               allbusinesses.addTo(map);
+
+              map.fitBounds(allbusinesses.getBounds(), {
+                  padding: [50, 50]
+
               console.log(data) // take a look at the data in the console
           });
-
-          // THIS IS NEW
-        map.fitBounds(allbusinesses.getBounds(), {
-            padding: [50, 50]
         });
-
     </script>
   </body>
 </html>
