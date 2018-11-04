@@ -126,7 +126,7 @@ $(document).ready(function(){
                          type : 'bar'
                      },
                      axis: {
-                       x: {label: 'Stages'},
+                       x: {label: 'Stage'},
                        y: {label: '# of Entries'}
                      },
                      bar: {
