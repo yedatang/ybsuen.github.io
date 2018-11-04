@@ -28,7 +28,7 @@
           $.getJSON(airtable_read_endpoint, function(result) {
                  $.each(result.records, function(key,value) {
                      items = {};
-                         items["name"] = value.fields.Name;
+                         // items["name"] = value.fields.Name;
                          items["latitud"] = value.fields.Lat;
                          items["longitud"] = value.fields.Lng;
                          data.push(items);
@@ -59,7 +59,7 @@
           for (var i in data) {
               var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
               L.marker( latlng )
-                  .bindPopup(data[i].name)
+                  // .bindPopup(data[i].name)
                   .addTo(map);
           }
     </script>
