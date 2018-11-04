@@ -35,13 +35,6 @@
                 .addLayer(mapboxTiles)
                 .setView([22.287111, 114.191667], 13);
 
-          /*
-          L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          subdomains: 'abcd',
-          ext: 'png'
-          }).addTo(map);
-          */
           var items = [];
           var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/venues?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
           var data = [];
@@ -68,31 +61,13 @@
           "longitud": 114.183333
           }]
           */
-          /*
-          var jsonFeatures = [];
-
-          data.forEach(function(point){
-          var lat = point.Lat;
-          var lon = point.Lng;
-
-          var feature = {type: 'Feature',
-              properties: point,
-              geometry: {
-                  type: 'Point',
-                  coordinates: [lon,lat]
-              }
-          };
-
-          jsonFeatures.push(feature);
-          });
-
-          var geoJson = { type: 'FeatureCollection', features: jsonFeatures };
-          L.geoJson(geoJson).addTo(map);
-          */
+          
           var i = 0;
-          for (var i in data.length; i++) {
-
-              L.marker( latlng ).addTo(map);
+          for (var i in data.length; i++)
+          {
+              L.marker(data[i].Lat,data[i].Lng))
+              .bindPopup(data[i].Name)
+              .addTo(map);
           }
     </script>
   </body>
