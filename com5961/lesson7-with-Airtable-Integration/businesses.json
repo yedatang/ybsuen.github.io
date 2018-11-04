@@ -5,37 +5,37 @@
         {
             "type": "Feature",
             "properties": {
-                "Name": "Gimme! Coffee",
-                "BusType": "Cafe",
-                "Description": "Gimme espresso bars are found in New York City and Upstate New York."
+                "Name": "North Point",
+                "Wiki_URL": "https://en.wikipedia.org/wiki/North_Point",
+                "Description": "It was called Little Shanghai many years ago."
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-76.499491, 42.444508]
+                "coordinates": [22.287111, 114.191667]
             }
         }, {
             "type": "Feature",
             "properties": {
-                "Name": "ZevRoss Spatial Analysis",
-               "BusType": "Data analysis and mapping",
-                "Description": "Specializes in spatial and environmental data analysis and statistics, geographic information systems and custom data design."
+                "Name": "Mong Kok",
+               "Wiki_URL": "https://en.wikipedia.org/wiki/Mong_Kok",
+                "Description": "One of the most densely populated district in Hong Kong."
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-76.4958259, 42.440258]
+                "coordinates": [22.3225, 114.170556]
             }
         }, {
             "type": "Feature",
             "properties": {
-                "Name": "Argos Inn",
-               "BusType": "Inn and Bar",
-                "Description": "Inn and cocktail bar in a beautifully restored historic mansion."
+                "Name": "Happy Valley",
+               "Wiki_URL": "https://en.wikipedia.org/wiki/Happy_Valley",
+                "Description": "The first horse racing venue in Hong Kong."
 
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [-76.492543, 42.439401]
+                "coordinates": [22.266667114, 114.183333]
             }
         }
 
