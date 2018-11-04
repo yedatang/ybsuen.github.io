@@ -15,11 +15,10 @@
     <div id="map" style="width: 600px; height: 400px"></div>
     <script>
         var mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-        var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; ' + mapLink, maxZoom: 18,})
+        var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
         var map = L.map('map')
               .setView([22.287111, 114.191667], 14)
               .addLayer(mapboxTiles);
-              // .addTo(map);
 
         var marker = L.marker([22.287111, 114.191667], {draggable: true})
               .bindPopup( '<a href="https://en.wikipedia.org/wiki/North_Point" target="_blank">North Point</a>')
