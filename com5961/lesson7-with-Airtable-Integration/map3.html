@@ -55,7 +55,6 @@
                          data.push(items);
                          console.log(items);
                   }); // end .each
-                  console.log(data);
           }); // end getJSON
           /*
           var data = [{
@@ -70,6 +69,7 @@
           "longitud": 114.183333
           }]
           */
+          /*
           var jsonFeatures = [];
 
           data.forEach(function(point){
@@ -89,6 +89,11 @@
 
           var geoJson = { type: 'FeatureCollection', features: jsonFeatures };
           L.geoJson(geoJson).addTo(map);
+          */
+          for (var i in data) {
+              var latlng = L.latLng({ lat: data[i].Lat, lng: data[i].Lng });
+              L.marker( latlng ).addTo(map);
+          }
     </script>
   </body>
 </html>
