@@ -27,9 +27,7 @@
               promise.then(function(data) {
               //do a bunch of stuff here
               var allbusinesses = L.geoJson(data);
-              allbusinesses
-                  .bindPopup(properties.Name);
-                  .addTo(map);
+              allbusinesses.addTo(map);
 
               map.fitBounds(allbusinesses.getBounds(), {
                   padding: [50, 50]
