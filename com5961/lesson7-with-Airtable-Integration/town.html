@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="leaflet.css">
   <script src="leaflet.js"></script>
   <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+  <script>
+  function show_districts(){
+    for (var i in data) {
+        var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
+        L.marker( latlng )
+            // .bindPopup(data[i].name)
+            .addTo(map);
+    }
+  }
+  </script>
   </head>
 
 <body>
@@ -29,12 +39,31 @@
       <h1>Town Page</h1>
       <p>Welcome to my town page!</p>
       <!--div id="map" style="width: 600px; height: 400px"></div-->
-      <div id="map1" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
-      <div id="map2" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+      <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+      <button type="button" class="btn btn-warning" id='roll_up'>Roll Up</button><br>
     </div>
   </div>
 </div>
-<script type='text/javascript' src='markers.json'></script>
-<script type='text/javascript' src='leaf-demo.js'></script>
+<script>
+    var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+
+    var map = L.map('map')
+          .addLayer(mapboxTiles)
+          .setView([22.287111, 114.191667], 13);
+
+    var items = [];
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/venues?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
+    var data = [];
+    $.getJSON(airtable_read_endpoint, function(result) {
+           $.each(result.records, function(key,value) {
+               items = {};
+                   // items["name"] = value.fields.Name;
+                   items["latitud"] = value.fields.Lat;
+                   items["longitud"] = value.fields.Lng;
+                   data.push(items);
+                   console.log(items);
+            }); // end .each
+    }); // end getJSON
+</script>
 </body>
 </html>
