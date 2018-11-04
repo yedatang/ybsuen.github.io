@@ -6,7 +6,7 @@
             "type": "Feature",
             "properties": {
                 "Name": "North Point",
-                "Wiki_URL": "https://en.wikipedia.org/wiki/North_Point",
+                "BusType": "https://en.wikipedia.org/wiki/North_Point",
                 "Description": "It was called Little Shanghai many years ago."
 
             },
@@ -18,7 +18,7 @@
             "type": "Feature",
             "properties": {
                 "Name": "Mong Kok",
-               "Wiki_URL": "https://en.wikipedia.org/wiki/Mong_Kok",
+               "BusType": "https://en.wikipedia.org/wiki/Mong_Kok",
                 "Description": "One of the most densely populated district in Hong Kong."
             },
             "geometry": {
@@ -29,7 +29,7 @@
             "type": "Feature",
             "properties": {
                 "Name": "Happy Valley",
-               "Wiki_URL": "https://en.wikipedia.org/wiki/Happy_Valley",
+               "BusType": "https://en.wikipedia.org/wiki/Happy_Valley",
                 "Description": "The first horse racing venue in Hong Kong."
 
             },
