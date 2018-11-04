@@ -57,6 +57,7 @@
 </script>
 <script>
 function show_districts(){
+  /*
   var myIcon = L.icon({
     iconUrl: 'images/pin24.png',
     iconRetinaUrl: 'images/pin48.png',
@@ -64,9 +65,10 @@ function show_districts(){
     iconAnchor: [9, 21],
     popupAnchor: [0, -14]
   })
-
+  */
   for (var i in data) {
-      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud }, {icon: myIcon});
+      // var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud }, {icon: myIcon});
+      var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng )
           // .bindPopup(data[i].name)
           .addTo(map);
