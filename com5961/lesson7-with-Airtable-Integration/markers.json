@@ -74,8 +74,8 @@ markers = [
    {
      "name": "China",
      "url": "https://en.wikipedia.org/wiki/China",
-     "lat": 23.697810,
-     "lng": 120.960515
+     "lat": 39.916667,
+     "lng": 116.383333
    },
    {
      "name": "Japan",
