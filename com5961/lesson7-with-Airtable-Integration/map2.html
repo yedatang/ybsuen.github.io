@@ -28,7 +28,7 @@
               //do a bunch of stuff here
               var allbusinesses = L.geoJson(data);
               allbusinesses
-                  .bindPopup(features.properties.Name);
+                  .bindPopup(properties.Name);
                   .addTo(map);
 
               map.fitBounds(allbusinesses.getBounds(), {
