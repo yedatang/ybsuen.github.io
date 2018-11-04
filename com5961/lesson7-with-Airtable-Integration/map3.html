@@ -49,9 +49,9 @@
           $.getJSON(airtable_read_endpoint, function(result) {
                  $.each(result.records, function(key,value) {
                      items = {};
-                         items[Name] = value.fields.Name;
-                         items[Lat] = value.fields.Lat;
-                         items[Lng] = value.fields.Lng;
+                         items["Name"] = value.fields.Name;
+                         items["Lat"] = value.fields.Lat;
+                         items["Lng"] = value.fields.Lng;
                          data.push(items);
                          console.log(items);
                   }); // end .each
