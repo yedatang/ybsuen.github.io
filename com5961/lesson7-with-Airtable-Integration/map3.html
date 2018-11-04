@@ -35,7 +35,7 @@
                          console.log(items);
                   }); // end .each
           }); // end getJSON
-          /*
+
           var data = [{
           "latitud": 22.287111,
           "longitud": 114.191667
@@ -47,7 +47,7 @@
           "latitud": 22.266667114,
           "longitud": 114.183333
           }]
-          */
+
           /*
           var i = 0;
           for (var i=0; i < data.length; i++) {
@@ -56,6 +56,7 @@
               .addTo(map);
           }
           */
+
           for (var i in data) {
               var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
               L.marker( latlng )
