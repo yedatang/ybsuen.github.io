@@ -125,6 +125,10 @@ $(document).ready(function(){
                          columns: table2_dataSet,
                          type : 'bar'
                      },
+                     axis: {
+                       x: {label: 'Stages'},
+                       y: {label: '# of Entries'}
+                     },
                      bar: {
                          title: "Tasks for Each Stage:",
                      }
