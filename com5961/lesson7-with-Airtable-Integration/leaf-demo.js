@@ -9,7 +9,7 @@ L.tileLayer(
     maxZoom: 18,
   }).addTo(map2);
 
-var marker = L.marker([22.287111, 114.191667])
+var marker2 = L.marker([22.287111, 114.191667])
     .bindPopup( '<a href="https://en.wikipedia.org/wiki/North_Point" target="_blank">North Point</a>')
     .addTo(map2);
 
