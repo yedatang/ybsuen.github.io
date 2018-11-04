@@ -43,7 +43,6 @@
           }).addTo(map);
           */
           var items = [];
-          var i = 0;
           var airtable_read_endpoint = "https://api.airtable.com/v0/appM38HXlEVhxmnqx/venues?api_key=keyTcsTzckqyBTlk8&sortField=_createdTime&sortDirection=desc";
           var data = [];
           $.getJSON(airtable_read_endpoint, function(result) {
@@ -90,8 +89,9 @@
           var geoJson = { type: 'FeatureCollection', features: jsonFeatures };
           L.geoJson(geoJson).addTo(map);
           */
-          for (var i in data) {
-              var latlng = L.latLng({ lat: data[i].Lat, lng: data[i].Lng });
+          var i = 0;
+          for (var i in data.length; i++) {
+
               L.marker( latlng ).addTo(map);
           }
     </script>
