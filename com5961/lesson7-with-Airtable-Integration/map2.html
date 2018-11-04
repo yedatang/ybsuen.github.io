@@ -30,7 +30,7 @@
               for ( var i=0; i < promise.responseJSON.length; ++i ) {
 
                 allbusinesses
-                  .bindPop(promise.responseJSON.features[i].properties.Name)
+                  .bindPopup(promise.responseJSON.features[i].properties.Name)
                   .addTo(map);
               }
 
