@@ -48,7 +48,8 @@
            $.each(result.records, function(key,value) {
                items = {};
                    items["name"] = value.fields.Name;
-                   items["url"] = value.fields.image_url;
+                   items["url"] = value.fields.url;
+                   items["image_url"] = value.fields.image_url;
                    items["latitud"] = value.fields.Lat;
                    items["longitud"] = value.fields.Lng;
                    data.push(items);
@@ -62,7 +63,7 @@ function show_districts(){
   for (var i in data) {
       var latlng = L.latLng({ lat: data[i].latitud, lng: data[i].longitud });
       L.marker( latlng )
-          .bindPopup( '<a href="' + data[i].image_url + '" target="_blank">' + data[i].url+'<br>'+data[i].name + '</a>' )
+          .bindPopup( '<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url+'"><br>'+data[i].name + '</a>' )
           .addTo(map);
   }
 }
